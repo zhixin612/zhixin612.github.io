@@ -23,7 +23,7 @@ repository               : "zhixin612/zhixin612.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "me.jpg"
   name             : "Zhixin Zhao (赵志新)"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D. student, TANKLAB, TianJin University."
