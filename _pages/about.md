@@ -48,12 +48,12 @@ redirect_from:
 ## Websites & Projects
 
 - [2026] **Daily Arxiv: Daily arXiv papers in ML system** 
-  - https://paper.tju.chat
-  - https://github.com/zhixin612/awesome-papers-LMsys
+  - [https://paper.tju.chat](https://paper.tju.chat)
+  - [https://github.com/zhixin612/awesome-papers-LMsys](https://github.com/zhixin612/awesome-papers-LMsys)
 - [2025] **PAT - Prefix-Aware Attention for LLM Decoding**
-  - flashserve/PAT: https://github.com/flashserve/PAT
+  - flashserve/PAT: [https://github.com/flashserve/PAT](https://github.com/flashserve/PAT)
 - [2024] **Twen - Campus AI Assistant** 
-  - twen.ai: https://twen.ai
+  - twen.ai: [https://twen.ai](https://twen.ai)
 
 
 ## Awards
