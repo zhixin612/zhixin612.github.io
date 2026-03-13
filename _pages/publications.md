@@ -11,7 +11,7 @@ You can also find my articles on [my Google Scholar profile]({{site.author.googl
 
 ## Conferences
 
-1. [**PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel**](https://arxiv.org/abs/2511.22333)<br>
+1. [**PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel**](https://dl.acm.org/doi/10.1145/3779212.3790200)<br>
    Jinjun Yi†, **Zhixin Zhao†**, Yitao Hu*, Ke Yan, Weiwei Sun, Hao Wang, Laiping Zhao, Yuhao Zhang, Wenxin Li, Keqiu Li.<br>
    (†equal contribution)<br>
    ACM International Conference on Architectural Support for Programming Languages and Operating Systems (**ASPLOS**), 2026.
