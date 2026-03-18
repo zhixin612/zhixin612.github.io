@@ -21,11 +21,11 @@ bundle exec jekyll serve --livereload
 
 **File: `_config.yml`**
 
-| Field | Description |
-|---|---|
+| Field                      | Description                    |
+| -------------------------- | ------------------------------ |
 | `first_name` / `last_name` | Your name (used in page title) |
-| `description` | Meta description for SEO |
-| `url` / `baseurl` | Deployment URL and path |
+| `description`              | Meta description for SEO       |
+| `url` / `baseurl`          | Deployment URL and path        |
 
 **File: `_data/socials.yml`**
 
@@ -33,7 +33,7 @@ Update email, Google Scholar ID, and GitHub username:
 
 ```yaml
 email: you@example.com
-scholar_userid: YOUR_SCHOLAR_ID   # from your Google Scholar URL
+scholar_userid: YOUR_SCHOLAR_ID # from your Google Scholar URL
 github_username: yourname
 ```
 
@@ -119,6 +119,7 @@ sections:
 ### Projects Page (`_projects/`)
 
 Each `.md` file is one project card. Currently two placeholders exist:
+
 - `1_project.md` — work category
 - `4_project.md` — fun category
 
@@ -129,9 +130,9 @@ To add a project, copy one of the existing files and edit the front matter:
 layout: page
 title: Your Project Title
 description: One-line description
-img: assets/img/your_image.jpg   # optional preview image
-importance: 1                    # lower = shown first
-category: work                   # work | fun
+img: assets/img/your_image.jpg # optional preview image
+importance: 1 # lower = shown first
+category: work # work | fun
 ---
 ```
 
@@ -148,6 +149,7 @@ layout: post
 date: 2025-06-01
 inline: true
 ---
+
 Short announcement text here.
 ```
 
@@ -160,7 +162,7 @@ Short announcement text here.
 **File: `_sass/_variables.scss`** — change `$purple-color`:
 
 ```scss
-$purple-color: #00468c !default;   // current: dark blue (R0 G70 B140)
+$purple-color: #00468c !default; // current: dark blue (R0 G70 B140)
 ```
 
 ### Enable / Disable Nav Pages
@@ -174,12 +176,12 @@ nav: false   # hidden
 
 Pages and their files:
 
-| Page | File |
-|---|---|
+| Page         | File                     |
+| ------------ | ------------------------ |
 | Publications | `_pages/publications.md` |
-| CV | `_pages/cv.md` |
-| Projects | `_pages/projects.md` |
-| Blog | `_pages/blog.md` |
+| CV           | `_pages/cv.md`           |
+| Projects     | `_pages/projects.md`     |
+| Blog         | `_pages/blog.md`         |
 | Repositories | `_pages/repositories.md` |
 
 ---
