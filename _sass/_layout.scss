@@ -56,8 +56,13 @@ body.sticky-bottom-footer {
 
 hr.honors-awards-divider {
   border: none;
+  margin: 1.2rem 0;
+}
+
+hr.section-divider {
+  border: none;
   border-top: 1px solid var(--global-divider-color);
-  margin: 0.8rem 0;
+  margin: 2rem 0;
 }
 
 // Content layout uses Bootstrap's grid system with responsive columns

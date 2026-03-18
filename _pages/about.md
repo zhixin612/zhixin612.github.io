@@ -27,17 +27,23 @@ latest_posts:
 
 I am a fourth-year Ph.D. student in [TANKLAB](http://www.tjutanklab.com/) at Tianjin University, advised by Prof. [Wenyu Qu](http://cic.tju.edu.cn/faculty/wyqu/index.html) and Prof. [Yitao Hu](http://sugartom.com/). I received my B.S. degree in Computer Science from [Northwest A&F University](https://www.nwafu.edu.cn). My research interests include **Machine Learning Systems**, **LLM Inference Serving**, **DNN Inference Serving**, and **RL Systems**.
 
+<hr class="section-divider">
+
 ## Projects
 
 - [2026] **Daily Arxiv: Daily arXiv papers in ML system** — [paper.tju.chat](https://paper.tju.chat) / [GitHub](https://github.com/zhixin612/awesome-papers-LMsys)
 - [2025] **PAT - Prefix-Aware Attention for LLM Decoding** — [flashserve/PAT](https://github.com/flashserve/PAT)
 - [2024] **Twen - Campus AI Assistant** — [twen.ai](https://twen.ai)
 
+<hr class="section-divider">
+
 ## Publications
 
 <div class="publications">
 {% bibliography %}
 </div>
+
+<hr class="section-divider">
 
 ## Honors & Awards
 
@@ -54,10 +60,14 @@ I am a fourth-year Ph.D. student in [TANKLAB](http://www.tjutanklab.com/) at Tia
 - [2020] The 2020 ICPC Asia-East Continent Final: **Bronze Medal**
 - [2020] The 45th ICPC Asia Regional Contest Shanghai Site: **Silver Medal**
 
+<hr class="section-divider">
+
 ## Service
 
 - [2025] ASPLOS — Artifact Evaluation Reviewer
 - [2023] ICA3PP — Reviewer
+
+<hr class="section-divider">
 
 ## Interests
 
