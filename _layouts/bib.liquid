@@ -16,13 +16,13 @@
             {% endif -%}
           >
             {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}{% if entry.year %} {{ entry.year }}{% endif %}</a>
+              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}{% if entry.year %}&ensp;{{ entry.year }}{% endif %}</a>
             {% else %}
-              <div>{{- entry.abbr -}}{% if entry.year %} {{ entry.year }}{% endif %}</div>
+              <div>{{- entry.abbr -}}{% if entry.year %}&ensp;{{ entry.year }}{% endif %}</div>
             {% endif %}
           </abbr>
         {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}{% if entry.year %} {{ entry.year }}{% endif %}</abbr>
+          <abbr class="badge rounded w-100">{{ entry.abbr }}{% if entry.year %}&ensp;{{ entry.year }}{% endif %}</abbr>
         {% endif %}
       {% endif %}
       {% if entry.preview %}
