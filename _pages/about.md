@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student @ <a href='http://www.tjutanklab.com/'>TANKLAB</a>, Tianjin University
+subtitle: 4th-year Ph.D. Student @ <a href='http://www.tjutanklab.com/'>TANKLAB</a>, Tianjin University
 
 profile:
   align: right
@@ -15,7 +15,7 @@ profile:
     <p><i class="ai ai-google-scholar"></i> &nbsp;<a href="https://scholar.google.com/citations?user=DasHBG8AAAAJ">Google Scholar</a></p>
     <p><i class="fa-brands fa-github"></i> &nbsp;<a href="https://github.com/zhixin612">zhixin612</a></p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false
 social: false
 
 announcements:
@@ -32,6 +32,22 @@ I am a fourth-year Ph.D. student in [TANKLAB](http://www.tjutanklab.com/) at Tia
 - [2026] **Daily Arxiv: Daily arXiv papers in ML system** — [paper.tju.chat](https://paper.tju.chat) / [GitHub](https://github.com/zhixin612/awesome-papers-LMsys)
 - [2025] **PAT - Prefix-Aware Attention for LLM Decoding** — [flashserve/PAT](https://github.com/flashserve/PAT)
 - [2024] **Twen - Campus AI Assistant** — [twen.ai](https://twen.ai)
+
+## Publications
+
+{% bibliography %}
+
+## Awards
+
+- [2021] The 2021 ICPC Shaanxi National Invitational: **Silver Medal**
+- [2020] The 2020 ICPC Asia-East Continent Final: **Bronze Medal**
+- [2020] The 45th ICPC Asia Regional Contest Shanghai Site: **Silver Medal**
+- [2024] Academic Scholarships, Tianjin University
+- [2023] Distinguished Academic Scholarship, Tianjin University
+- [2022] Outstanding Graduate, Northwest A&F University
+- [2021] Presidential Scholarship, Northwest A&F University
+- [2020] National Encouragement Scholarship, Northwest A&F University
+- [2019] National Encouragement Scholarship, Northwest A&F University
 
 ## Service
 
