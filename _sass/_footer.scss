@@ -31,5 +31,15 @@ footer.sticky-bottom {
 
   .container {
     text-align: center;
+    color: var(--global-text-color-light);
+  }
+
+  a {
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
   }
 }
