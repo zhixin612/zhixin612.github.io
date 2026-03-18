@@ -9,11 +9,11 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p><i class="fa-solid fa-location-dot"></i> &nbsp;Tianjin, China</p>
-    <p><i class="fa-solid fa-graduation-cap"></i> &nbsp;Tianjin University</p>
-    <p><i class="fa-solid fa-envelope"></i> &nbsp;<a href="mailto:zhao612@tju.edu.cn">zhao612@tju.edu.cn</a></p>
-    <p><i class="ai ai-google-scholar"></i> &nbsp;<a href="https://scholar.google.com/citations?user=DasHBG8AAAAJ">Google Scholar</a></p>
-    <p><i class="fa-brands fa-github"></i> &nbsp;<a href="https://github.com/zhixin612">zhixin612</a></p>
+    <p><i class="fa-solid fa-location-dot"></i>Tianjin, China</p>
+    <p><i class="fa-solid fa-graduation-cap"></i>Tianjin University</p>
+    <p><i class="fa-solid fa-envelope"></i><a href="mailto:zhao612@tju.edu.cn">zhao612@tju.edu.cn</a></p>
+    <p><i class="ai ai-google-scholar"></i><a href="https://scholar.google.com/citations?user=DasHBG8AAAAJ">Google Scholar</a></p>
+    <p><i class="fa-brands fa-github"></i><a href="https://github.com/zhixin612">zhixin612</a></p>
 
 selected_papers: false
 social: false
@@ -35,19 +35,24 @@ I am a fourth-year Ph.D. student in [TANKLAB](http://www.tjutanklab.com/) at Tia
 
 ## Publications
 
+<div class="publications">
 {% bibliography %}
+</div>
 
-## Awards
+## Honors & Awards
 
-- [2021] The 2021 ICPC Shaanxi National Invitational: **Silver Medal**
-- [2020] The 2020 ICPC Asia-East Continent Final: **Bronze Medal**
-- [2020] The 45th ICPC Asia Regional Contest Shanghai Site: **Silver Medal**
 - [2024] Academic Scholarships, Tianjin University
 - [2023] Distinguished Academic Scholarship, Tianjin University
 - [2022] Outstanding Graduate, Northwest A&F University
 - [2021] Presidential Scholarship, Northwest A&F University
 - [2020] National Encouragement Scholarship, Northwest A&F University
 - [2019] National Encouragement Scholarship, Northwest A&F University
+
+<hr class="honors-awards-divider">
+
+- [2021] The 2021 ICPC Shaanxi National Invitational: **Silver Medal**
+- [2020] The 2020 ICPC Asia-East Continent Final: **Bronze Medal**
+- [2020] The 45th ICPC Asia Regional Contest Shanghai Site: **Silver Medal**
 
 ## Service
 

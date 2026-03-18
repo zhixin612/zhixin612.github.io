@@ -42,12 +42,22 @@ body.sticky-bottom-footer {
   .more-info {
     p {
       margin: 0.3rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.35em;
       i, .ai {
-        width: 1.2em;
+        width: 1.1em;
         text-align: center;
+        flex-shrink: 0;
       }
     }
   }
+}
+
+hr.honors-awards-divider {
+  border: none;
+  border-top: 1px solid var(--global-divider-color);
+  margin: 0.8rem 0;
 }
 
 // Content layout uses Bootstrap's grid system with responsive columns
