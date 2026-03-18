@@ -9,11 +9,14 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Tianjin, China</p>
-    <p>zhao612@tju.edu.cn</p>
+    <p><i class="fa-solid fa-location-dot"></i> &nbsp;Tianjin, China</p>
+    <p><i class="fa-solid fa-graduation-cap"></i> &nbsp;Tianjin University</p>
+    <p><i class="fa-solid fa-envelope"></i> &nbsp;<a href="mailto:zhao612@tju.edu.cn">zhao612@tju.edu.cn</a></p>
+    <p><i class="ai ai-google-scholar"></i> &nbsp;<a href="https://scholar.google.com/citations?user=DasHBG8AAAAJ">Google Scholar</a></p>
+    <p><i class="fa-brands fa-github"></i> &nbsp;<a href="https://github.com/zhixin612">zhixin612</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false
 
 announcements:
   enabled: false
