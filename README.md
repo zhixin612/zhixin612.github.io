@@ -1,7 +1,7 @@
 # Homepage Maintenance Guide
 
 Personal academic homepage built with [al-folio](https://github.com/alshedivat/al-folio).
-Live site: [zhixin612.github.io/homepage](https://zhixin612.github.io/homepage)
+Live site: [zhixin612.github.io](https://zhixin612.github.io)
 
 ---
 
@@ -11,137 +11,85 @@ Live site: [zhixin612.github.io/homepage](https://zhixin612.github.io/homepage)
 # Install dependencies (first time only)
 bundle install
 
-# Start local server → http://localhost:4000/homepage/
+# Start local server → http://localhost:4000
 bundle exec jekyll serve --livereload
 ```
 
 ---
 
-## Site Configuration
+## 1. Basic Information
+
+### 1.1 Name
 
 **File: `_config.yml`**
 
-| Field                      | Description                    |
-| -------------------------- | ------------------------------ |
-| `first_name` / `last_name` | Your name (used in page title) |
-| `description`              | Meta description for SEO       |
-| `url` / `baseurl`          | Deployment URL and path        |
+```yaml
+first_name: Zhixin
+last_name: Zhao
+scholar:
+  last_name: [Zhao]
+  first_name: [Zhixin, Z.]   # used to bold+underline your name in publication lists
+```
+
+### 1.2 Profile Photo
+
+Replace `assets/img/prof_pic.jpg` with your photo (keep the filename).
+
+### 1.3 Subtitle & Affiliation
+
+**File: `_pages/about.md`** — edit the `subtitle` field in front matter:
+
+```yaml
+subtitle: 4th-year Ph.D. Student @ <a href="...">TANKLAB</a>, Tianjin University
+```
+
+### 1.4 Contact Info (below photo)
+
+**File: `_pages/about.md`** — edit the `more_info` block in front matter (location, institution link, email, Google Scholar, GitHub).
+
+### 1.5 Email / Scholar / GitHub
 
 **File: `_data/socials.yml`**
 
-Update email, Google Scholar ID, and GitHub username:
-
 ```yaml
-email: you@example.com
-scholar_userid: YOUR_SCHOLAR_ID # from your Google Scholar URL
+email: you@email.com
+scholar_userid: YOUR_ID        # from https://scholar.google.com/citations?user=YOUR_ID
 github_username: yourname
 ```
 
 ---
 
-## Content Updates
+## 2. Homepage Sections
 
-### Profile Photo
+All homepage content lives in **`_pages/about.md`**.
 
-Replace `assets/img/prof_pic.jpg` with your photo (keep the filename).
+### 2.1 Bio Paragraph
 
-### Homepage (`_pages/about.md`)
+Edit the opening paragraph directly in the body of `_pages/about.md`.
 
-The about page controls the front page layout. Edit the following sections directly in the file:
+### 2.2 Projects (homepage blurb)
 
-- **Subtitle** — the line under your name (affiliation, title)
-- **Profile sidebar** (`more_info`) — location, institution, email, links shown below photo
-- **Bio** — the introductory paragraph
-- **Projects** — a short list of notable projects/tools
-- **Honors & Awards** — scholarships and competition awards
-- **Service** — reviewing, organizing, etc.
-- **Interests** — hobbies
+Edit the **Projects** section in the body of `_pages/about.md`. This is a short text summary, not the project cards — for the full project card page, see [5. Projects Page](#5-projects-page).
 
-### Publications (`_bibliography/papers.bib`)
+### 2.3 Honors & Awards
 
-Add a new paper by appending a BibTeX entry. Example:
+Edit the **Honors & Awards** section in the body of `_pages/about.md`.
 
-```bibtex
-@inproceedings{yourkey2025,
-  title    = {Your Paper Title},
-  author   = {Zhao, Zhixin and Coauthor, Name},
-  booktitle = {Conference Full Name},
-  abbr     = {CONF},        % badge label shown in the list
-  year     = {2025},
-  html     = {https://link-to-paper},
-  pdf      = {[CONF'25] ShortTitle.pdf},    % place file in assets/pdf/
-  slides   = {[CONF'25] ShortTitle-slides.pdf},
-  selected = {true},        % show on homepage; omit or set false otherwise
-  note     = {<sup>†</sup><em>Equal Contribution</em>},  % optional footnote
-}
-```
+> **Also update:** `_data/cv.yml` under the `Awards` and `Scholarships` sections so the CV page stays consistent.
 
-**PDF / Slides files** → place in `assets/pdf/`. Naming convention: `[CONF'YY] SystemName.pdf`
+### 2.4 Service
 
-**Equal contribution** — add `†` after the last name in the author field: `Zhao†, Zhixin`
+Edit the **Service** section in the body of `_pages/about.md`.
 
-### CV (`_data/cv.yml`)
+> **Also update:** `_data/cv.yml` under the `Service` section if you want it reflected on the CV page.
 
-Structured YAML. Each top-level key under `sections:` becomes a CV section. Supported section types and their fields:
+### 2.5 Interests
 
-```yaml
-sections:
-  Education:
-    - institution: University Name
-      area: Computer Science
-      studyType: Ph.D.
-      start_date: 2021
-      end_date: present
-      highlights:
-        - "Advisor: Prof. ..."
+Edit the **Interests** section in the body of `_pages/about.md`.
 
-  Experience:
-    - company: Lab / Company
-      position: Research Intern
-      start_date: 2024-06
-      end_date: 2024-09
-      highlights:
-        - Description of work
+### 2.6 Announcements
 
-  Awards:
-    - title: Award Name
-      date: 2024
-      awarder: Organization
-
-  Publications:
-    - title: Paper Title
-      authors: [Zhixin Zhao]
-      publisher: Conference / Journal
-      releaseDate: 2025-01-01
-      url: https://...
-```
-
-### Projects Page (`_projects/`)
-
-Each `.md` file is one project card. Currently two placeholders exist:
-
-- `1_project.md` — work category
-- `4_project.md` — fun category
-
-To add a project, copy one of the existing files and edit the front matter:
-
-```yaml
----
-layout: page
-title: Your Project Title
-description: One-line description
-img: assets/img/your_image.jpg # optional preview image
-importance: 1 # lower = shown first
-category: work # work | fun
----
-```
-
-Add any preview images to `assets/img/`.
-
-### News / Announcements
-
-To re-enable announcements, set `announcements.enabled: true` in `_pages/about.md`,
-then add entries to `_news/`. File format:
+To enable: set `announcements: enabled: true` in `_pages/about.md` front matter, then add files to `_news/`:
 
 ```markdown
 ---
@@ -155,45 +103,151 @@ Short announcement text here.
 
 ---
 
-## Appearance
+## 3. Publications
 
-### Accent Color
+### 3.1 Add / Edit a Paper
 
-**File: `_sass/_variables.scss`** — change `$purple-color`:
+**File: `_bibliography/papers.bib`** — append a BibTeX entry:
 
-```scss
-$purple-color: #00468c !default; // current: dark blue (R0 G70 B140)
+```bibtex
+@inproceedings{yourkey2025,
+  title     = {Your Paper Title},
+  author    = {Zhao, Zhixin and Coauthor, Name},
+  booktitle = {Conference Full Name},
+  abbr      = {CONF},                              % badge shown in the list (e.g., ASPLOS)
+  year      = {2025},
+  html      = {https://link-to-paper},
+  pdf       = {[CONF'25] ShortTitle.pdf},          % place file in assets/pdf/
+  slides    = {[CONF'25] ShortTitle-slides.pdf},   % optional
+  note      = {<sup>†</sup><em>Equal Contribution</em>},  % optional footnote
+}
 ```
 
-### Enable / Disable Nav Pages
+> **Also update:** `_data/cv.yml` under the `Publications` section if you want the paper listed on the CV page.
 
-Each page under `_pages/` has a `nav:` field in its front matter:
+### 3.2 Equal Contribution
 
-```yaml
-nav: true    # shown in navbar
-nav: false   # hidden
+Add `†` suffix to co-first authors' last names in the `author` field:
+
+```bibtex
+author = {Yi†, Jinjun and Zhao†, Zhixin and ...}
 ```
 
-Pages and their files:
+Then add the note:
 
-| Page         | File                     |
-| ------------ | ------------------------ |
-| Publications | `_pages/publications.md` |
-| CV           | `_pages/cv.md`           |
-| Projects     | `_pages/projects.md`     |
-| Blog         | `_pages/blog.md`         |
-| Repositories | `_pages/repositories.md` |
+```bibtex
+note = {<sup>†</sup><em>Equal Contribution</em>}
+```
+
+### 3.3 PDF / Slides Files
+
+Place files in **`assets/pdf/`**. Naming convention: `[CONF'YY] SystemName.pdf` / `[CONF'YY] SystemName-slides.pdf`.
 
 ---
 
-## Deployment
+## 4. CV Page
 
-Push to `main` branch — GitHub Actions automatically builds and deploys to GitHub Pages.
+**File: `_data/cv.yml`**
+
+The CV page is fully driven by this file. Structure:
+
+```yaml
+- title: Education
+  type: time_table
+  contents:
+    - institution: Tianjin University
+      degree: Ph.D. in Computer Science
+      year: 2021 – present
+      description:
+        - "Advisor: Prof. ..."
+
+- title: Awards
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - Award Name, Organization
+
+- title: Publications
+  type: list
+  contents:
+    - <a href="...">Paper Title</a>, Conference, Year
+
+- title: Service
+  type: list
+  contents:
+    - "Reviewer: Conference/Journal Name"
+```
+
+> **Note:** The CV page reads only from `_data/cv.yml`. The homepage reads only from `_pages/about.md`. Keep them in sync manually when updating awards, publications, or service.
+
+---
+
+## 5. Projects Page
+
+**Directory: `_projects/`** — each `.md` file is one project card.
+
+```yaml
+---
+layout: page
+title: Project Title
+description: One-line description with <a href="...">links</a>
+img: assets/img/your_image.jpg   # optional preview image
+importance: 1                    # lower = shown first within category
+category: work                   # work | fun
+---
+```
+
+Add preview images to `assets/img/`. To add a new project, copy an existing file and rename it (the filename is only for organization; `importance` controls order).
+
+---
+
+## 6. Site Configuration
+
+### 6.1 Enable / Disable Nav Pages
+
+Edit the `nav:` field in the front matter of each page file:
+
+| Page         | File                     | Default |
+| ------------ | ------------------------ | ------- |
+| Publications | `_pages/publications.md` | `true`  |
+| CV           | `_pages/cv.md`           | `true`  |
+| Projects     | `_pages/projects.md`     | `true`  |
+| Blog         | `_pages/blog.md`         | `false` |
+| Repositories | `_pages/repositories.md` | `false` |
+| Teaching     | `_pages/teaching.md`     | `false` |
+
+### 6.2 Add a New Nav Page
+
+1. Create `_pages/yourpage.md` with `nav: true` and `nav_order: N`
+2. Write content using any Jekyll layout (e.g., `layout: page`)
+
+### 6.3 Accent Color
+
+**File: `_sass/_variables.scss`**
+
+```scss
+$purple-color: #00468c !default; // site accent color (currently dark blue)
+```
+
+### 6.4 Favicon
+
+**File: `_config.yml`**
+
+```yaml
+favicon: /assets/img/favicon.png
+```
+
+Replace `assets/img/favicon.png` with your icon file (SVG recommended for sharpness).
+
+---
+
+## 7. Deployment
+
+Push to `main` — GitHub Actions builds and deploys automatically (~1–2 min):
 
 ```bash
 git add <files>
 git commit -m "update: ..."
 git push
 ```
-
-The live site updates within ~1–2 minutes after push.
