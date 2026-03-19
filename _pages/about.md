@@ -9,8 +9,6 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p> <i class="fa-solid fa-location-dot"></i> Tianjin, China</p>
-    <p> <i class="fa-solid fa-graduation-cap"></i> <a href="https://tju.edu.cn">Tianjin University</a></p>
     <p> <i class="fa-solid fa-envelope"></i> <a href="mailto:zhao612@tju.edu.cn">zhao612@tju.edu.cn</a></p>
     <p> <i class="fa-brands fa-github"></i> <a href="https://github.com/zhixin612">zhixin612</a></p>
     <p> <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=DasHBG8AAAAJ">Google Scholar</a></p>
@@ -30,10 +28,10 @@ Hi, I'm Zhixin Zhao, a fourth-year Ph.D. student in TANKLab at Tianjin Universit
 
 <hr class="section-divider">
 
-## Publications
+## Selected Publications
 
 <div class="publications">
-{% bibliography %}
+{% bibliography -f papers -q @*[selected=true]* %}
 </div>
 
 <hr class="section-divider">
@@ -48,12 +46,9 @@ Hi, I'm Zhixin Zhao, a fourth-year Ph.D. student in TANKLab at Tianjin Universit
 
 ## Honors & Awards
 
-- [2024] Academic Scholarships, Tianjin University
-- [2023] Distinguished Academic Scholarship, Tianjin University
-- [2022] Outstanding Graduate, Northwest A&F University
-- [2021] Presidential Scholarship, Northwest A&F University
-- [2020] National Encouragement Scholarship, Northwest A&F University
-- [2019] National Encouragement Scholarship, Northwest A&F University
+- [2023] **Distinguished Academic Scholarship**, Tianjin University
+- [2022] **Outstanding Graduate (Top 2%)**, Northwest A&F University
+- [2021] **Presidential Scholarship**, Northwest A&F University
 
 <hr class="honors-awards-divider">
 
