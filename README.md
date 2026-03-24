@@ -8,7 +8,7 @@ Live site: [zhixin612.github.io](https://zhixin612.github.io)
 ## Local Development
 
 ```bash
-# Install dependencies (first time only)
+# Install dependencies (first time or after Gemfile changes)
 bundle install
 
 # Start local server → http://localhost:4000
@@ -276,9 +276,39 @@ Add preview images to `assets/img/`. To add a new project, create a new `.md` fi
 
 ---
 
-## 6. Site Configuration
+## 6. Photography Page
 
-### 6.1 Enable / Disable Nav Pages
+**Directory: `assets/img/photography/`**
+
+The photography page displays a masonry (waterfall) gallery of your photos, sorted by shooting date (newest first). It is fully automated — just drop photos into the directory and rebuild the site.
+
+### Add Photos
+
+1. Place `.jpg` / `.jpeg` / `.png` files into `assets/img/photography/`
+2. Rebuild the site (`bundle exec jekyll serve` or push to trigger CI)
+3. Done — the plugin automatically reads EXIF shooting date and image dimensions
+
+**How it works:** The Jekyll plugin `_plugins/photography.rb` scans the photo directory at build time, extracts EXIF `DateTimeOriginal` (falls back to file modification time), reads image width/height, and feeds the data to the gallery template. ImageMagick generates responsive WebP thumbnails (480/800/1400px) automatically.
+
+### Gallery Features
+
+- **Masonry layout** — photos of different aspect ratios tile naturally (3 cols → 2 cols → 1 col on smaller screens)
+- **Lightbox** — click any photo to view full size with dark overlay (PhotoSwipe); swipe/arrow to browse, ESC/click to close
+- **Lazy loading** — only first 6 images load eagerly; the rest load on scroll
+- **Responsive thumbnails** — WebP images at multiple sizes, browser picks the best fit
+
+### Tips
+
+- JPEG photos with EXIF data are ideal — the shooting date is read automatically
+- For PNG or photos without EXIF, the file's last-modified time is used for sorting
+- No need to resize photos beforehand — ImageMagick handles thumbnail generation
+- Filename becomes the alt text (with `-` and `_` replaced by spaces)
+
+---
+
+## 7. Site Configuration
+
+### 7.1 Enable / Disable Nav Pages
 
 Edit the `nav:` field in the front matter of each page file:
 
@@ -287,16 +317,17 @@ Edit the `nav:` field in the front matter of each page file:
 | Publications | `_pages/publications.md` | `true`  |
 | CV           | `_pages/cv.md`           | `true`  |
 | Projects     | `_pages/projects.md`     | `true`  |
+| Photography  | `_pages/photography.md`  | `true`  |
 | Blog         | `_pages/blog.md`         | `false` |
 | Repositories | `_pages/repositories.md` | `false` |
 | Teaching     | `_pages/teaching.md`     | `false` |
 
-### 6.2 Add a New Nav Page
+### 7.2 Add a New Nav Page
 
 1. Create `_pages/yourpage.md` with `nav: true` and `nav_order: N`
 2. Write content using any Jekyll layout (e.g., `layout: page`)
 
-### 6.3 Accent Color
+### 7.3 Accent Color
 
 **File: `_sass/_variables.scss`**
 
@@ -304,7 +335,7 @@ Edit the `nav:` field in the front matter of each page file:
 $purple-color: #00468c !default; // site accent color (currently dark blue)
 ```
 
-### 6.4 Favicon
+### 7.4 Favicon
 
 **File: `_config.yml`**
 
@@ -316,7 +347,7 @@ Replace `assets/img/favicon.png` with your icon file (SVG recommended for sharpn
 
 ---
 
-## 7. Deployment
+## 8. Deployment
 
 Push to `main` — GitHub Actions builds and deploys automatically (~1–2 min):
 
