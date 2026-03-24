@@ -176,6 +176,19 @@
   }
 }
 
+@keyframes bib-flash {
+  from {
+    background-color: color-mix(in srgb, var(--global-theme-color) 50%, transparent);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.bib-flash {
+  animation: bib-flash 1s ease-out;
+}
+
 .citation,
 .citation-number {
   color: var(--global-theme-color);

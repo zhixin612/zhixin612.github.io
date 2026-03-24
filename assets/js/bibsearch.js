@@ -52,6 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const updateInputField = () => {
     const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
+    // If the hash matches a bibliography entry id, scroll to it instead of filtering
+    const targetElement = hashValue ? document.getElementById(hashValue) : null;
+    if (targetElement && targetElement.closest(".bibliography")) {
+      document.getElementById("bibsearch").value = "";
+      filterItems("");
+      const entry = targetElement.closest("li") || targetElement;
+      entry.scrollIntoView({ behavior: "smooth", block: "center" });
+      entry.classList.add("bib-flash");
+      entry.addEventListener("animationend", () => entry.classList.remove("bib-flash"), { once: true });
+      return;
+    }
     document.getElementById("bibsearch").value = hashValue;
     filterItems(hashValue);
   };
