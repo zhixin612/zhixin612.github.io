@@ -1,0 +1,22 @@
+{% if site.data.photography.size > 0 %}
+<div class="photography-gallery pswp-gallery" id="photography-gallery">
+  <div class="grid">
+    {% for photo in site.data.photography %}
+      <div class="grid-item photo-card col-lg-3 col-sm-6 col-12">
+        <a href="{{ photo.src | relative_url }}"
+           data-pswp-width="{{ photo.width }}"
+           data-pswp-height="{{ photo.height }}"
+           target="_blank">
+          {% if forloop.index <= 6 %}
+            {% include figure.liquid path=photo.src alt=photo.alt class="photo-img" sizes="(max-width: 576px) 100vw, (max-width: 768px) 50vw, 33vw" loading="eager" %}
+          {% else %}
+            {% include figure.liquid path=photo.src alt=photo.alt class="photo-img" sizes="(max-width: 576px) 100vw, (max-width: 768px) 50vw, 33vw" %}
+          {% endif %}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% else %}
+<p class="photography-empty">No photos yet. Check back soon!</p>
+{% endif %}

@@ -1,0 +1,62 @@
+/*******************************************************************************
+ * Photography Gallery
+ ******************************************************************************/
+
+.photography-gallery {
+  // Break out of .container and center at ~1160px
+  // width: 100vw;
+  // max-width: 1160px;
+  // margin-left: 50%;
+  // transform: translateX(-50%);
+  // padding: 0.5rem 0;
+  width: calc((100vw - 2rem) * 0.8);
+  margin-left: calc(-50vw + 50%);                                                                                                                                                                                                                                                   
+  margin-right: calc(-50vw + 50%);                                                                                                                                                                                                                                                  
+  margin-inline: auto;
+
+  .grid {
+    .photo-card {
+      padding: 8px;
+      margin-bottom: 0;
+
+      a {
+        display: block;
+        border-radius: 4px;
+        overflow: hidden;
+        background: var(--global-card-bg-color);
+        border: 1px solid rgba(128, 128, 128, 0.12);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+
+        &:hover {
+          transform: scale(1.015);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        figure {
+          margin: 0;
+
+          picture {
+            display: block;
+
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.photography-empty {
+  text-align: center;
+  color: var(--global-text-color-light);
+  padding: 4rem 0;
+  font-style: italic;
+}
