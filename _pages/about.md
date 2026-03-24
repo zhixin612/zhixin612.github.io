@@ -26,6 +26,14 @@ latest_posts:
 
 Hi, I'm Zhixin Zhao, a fourth-year Ph.D. student in TANKLab at Tianjin University (2022-Present), advised by Prof. [Wenyu Qu](http://cic.tju.edu.cn/faculty/wyqu/index.html) and Prof. [Yitao Hu](https://flashserve.org). I received my B.S. degree in Computer Science and Technology from [Northwest A&F University](https://www.nwafu.edu.cn) (2018-2022). My research interests include **ML Systems**, **LLM Serving**, **DNN Serving**, and **RL Systems**.
 
+<span style="color: red; font-weight: bold;">I'm seeking a long-term (6-month) full-time research internship in China for 2026. Feel free to reach out if you're interested in my research or potential collaborations!</span>
+
+<hr class="section-divider">
+
+## Selected Projects
+
+{% include selected_projects.liquid type="research" %}
+
 <hr class="section-divider">
 
 ## Selected Publications
@@ -36,11 +44,9 @@ Hi, I'm Zhixin Zhao, a fourth-year Ph.D. student in TANKLab at Tianjin Universit
 
 <hr class="section-divider">
 
-## Projects
+## Side Projects
 
-- [2026] **Daily Arxiv: Daily arXiv papers in ML system** — [paper.tju.chat](https://paper.tju.chat) / [GitHub](https://github.com/zhixin612/awesome-papers-LMsys)
-- [2025] **PAT - Prefix-Aware Attention for LLM Decoding** — [flashserve/PAT](https://github.com/flashserve/PAT)
-- [2024] **Twen - Campus AI Assistant** — [twen.ai](https://twen.ai)
+{% include selected_projects.liquid type="side" %}
 
 <hr class="section-divider">
 

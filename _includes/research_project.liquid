@@ -1,0 +1,31 @@
+<div class="research-project-entry">
+  <div class="title">{% if project.period %}<span class="badge rounded period-badge">{{ project.period }}</span> {% endif %}{{ project.title }}</div>
+  {% if project.img %}
+    <div class="project-thumbnail-float">
+      {%
+        include figure.liquid
+        loading="eager"
+        path=project.img
+        sizes="200px"
+        alt=project.title
+        class="preview z-depth-1 rounded"
+      %}
+    </div>
+  {% endif %}
+  {% if project.description %}
+    <div class="description">{{ project.description | markdownify }}</div>
+  {% endif %}
+  <div class="links">
+    {% if project.github %}
+      <a href="{{ project.github }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
+    {% endif %}
+    {% if project.website %}
+      <a href="{{ project.website }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-globe"></i> Website</a>
+    {% endif %}
+    {% if project.papers %}
+      {% for paper in project.papers %}
+        <a href="{{ '/publications/' | relative_url }}#{{ paper.key }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-lines"></i> {{ paper.label }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>

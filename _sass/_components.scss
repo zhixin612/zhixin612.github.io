@@ -160,6 +160,123 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Research Projects
+
+.research-projects {
+  clear: both;
+  margin-top: 1rem;
+
+  .research-project-entry {
+    margin-bottom: 1.5rem;
+    overflow: hidden; // clear float
+
+    .project-thumbnail-float {
+      float: right;
+      width: 25%;
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .title {
+      font-weight: bolder;
+
+      .period-badge {
+        display: inline-block;
+        background-color: var(--global-theme-color);
+        color: var(--global-card-bg-color) !important;
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+        font-weight: normal;
+        vertical-align: middle;
+        margin-right: 0.4rem;
+        position: relative;
+        top: -0.1rem;
+      }
+    }
+
+    .description {
+      margin: 0.5rem 0;
+      color: var(--global-text-color);
+      font-size: 0.95rem;
+
+      p {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .links {
+      a.btn {
+        color: var(--global-text-color);
+        border: 1px solid var(--global-text-color);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        margin-left: 0;
+
+        &:hover {
+          color: var(--global-theme-color);
+          border-color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
+// Side project cards
+
+.projects .card .card-img-wrapper {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.projects .card .card-text {
+  font-size: 0.85rem;
+}
+
+.projects .card .card-title {
+  font-size: 1.1rem;
+}
+
+.projects .card .card-footer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.projects .card-year {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--global-theme-color);
+}
+
+.projects .card-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  a {
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
 // Repositories
 
 @media (min-width: 768px) {

@@ -1,0 +1,21 @@
+{%- assign all_projects = site.projects | sort: "importance" | sort: "year" | reverse -%}
+{%- assign research_projects = all_projects | where: "category", "research" | where: "selected", true -%}
+{%- assign side_projects = all_projects | where: "category", "fun" | where: "selected", true -%}
+{%- if include.type == "research" and research_projects.size > 0 -%}
+<div class="research-projects">
+{%- for project in research_projects %}
+{%- include research_project.liquid -%}
+{% endfor -%}
+</div>
+{%- endif -%}
+{%- if include.type == "side" and side_projects.size > 0 -%}
+<div class="projects">
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3">
+{%- for project in side_projects -%}
+{% include side_project_card.liquid %}
+{%- endfor -%}
+</div>
+</div>
+</div>
+{%- endif -%}
