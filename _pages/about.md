@@ -24,7 +24,7 @@ latest_posts:
   enabled: false
 ---
 
-Hi, I'm Zhixin Zhao, a fourth-year Ph.D. student in TANKLab at Tianjin University (2022-Present), advised by Prof. [Wenyu Qu](http://cic.tju.edu.cn/faculty/wyqu/index.html) and Prof. [Yitao Hu](https://flashserve.org). I received my B.S. degree in Computer Science and Technology from [Northwest A&F University](https://www.nwafu.edu.cn) (2018-2022). My research interests include **ML Systems**, **LLM Serving**, **DNN Serving**, and **RL Systems**.
+Hi, I'm **Zhixin Zhao**, a fourth-year Ph.D. student in TANKLab at Tianjin University (2022-Present), advised by Prof. [Wenyu Qu](http://cic.tju.edu.cn/faculty/wyqu/index.html) and Prof. [Yitao Hu](https://flashserve.org). I received my B.S. degree in Computer Science and Technology from [Northwest A&F University](https://www.nwafu.edu.cn) (2018-2022). My research interests include **ML Systems**, **LLM Serving**, **DNN Serving**, and **RL Systems**.
 
 <span style="color: red; font-weight: bold;">I'm seeking a long-term (6-month) full-time research internship in China for 2026. Feel free to reach out if you're interested in my research or potential collaborations!</span>
 

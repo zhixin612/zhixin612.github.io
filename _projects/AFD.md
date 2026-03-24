@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Accelerating rollout of RL for LLM"
+title: "AFD and Asynchronous Inference for LLM Serving"
 description: >
     collaborative project, WIP...
 category: research
