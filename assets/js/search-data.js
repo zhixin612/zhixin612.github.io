@@ -45,6 +45,11 @@ ninja.data = [{
           description: "Campus AI assistant platform powered by large language models.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/0-twen/";
+            },},{id: "projects-afd-and-asynchronous-inference-for-llm-serving",
+          title: 'AFD and Asynchronous Inference for LLM Serving',
+          description: "collaborative project, WIP...",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AFD/";
             },},{id: "projects-serving-systems-for-dnns-scheduling-and-resource-management",
           title: 'Serving Systems for DNNs: Scheduling and Resource Management',
           description: "**DNN serving systems face challenges in maintaining strict latency while minimizing costs in complex inference pipelines**. We optimized the end-to-end serving lifecycle through three systems: * **(1) PARD** improves goodput by **proactively dropping requests** likely to timeout using bi-directional runtime information and adaptive priorities.* **(2) Harpagon** minimizes serving costs via **batch-aware request dispatching** and multi-tuple configuration optimization to maximize throughput under latency constraints.* **(3) SLOpt** addresses inter-model dependencies and mitigates cascade blocking through **cascade workload estimation**, ensuring efficiency and SLO compliance.",
@@ -65,6 +70,11 @@ ninja.data = [{
           description: "The unpredictable output length of LLM requests often leads to severe load imbalance across instances and inefficient resource utilization within them. We develop a prediction-based scheduling framework that leverages a high-accuracy output length predictor to enable a two-level scheduling mechanism: cluster-level multi-dimensional load balancing and instance-level SLO-aware scheduling. This system significantly improves the throughput of large-scale LLM deployments while strictly maintaining service quality.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/predict/";
+            },},{id: "projects-accelerating-rollout-of-rl-for-llm",
+          title: 'Accelerating rollout of RL for LLM',
+          description: "collaborative project, WIP...",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rollout/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
