@@ -67,27 +67,67 @@ All homepage content lives in **`_pages/about.md`**.
 
 Edit the opening paragraph directly in the body of `_pages/about.md`.
 
-### 2.2 Projects (homepage blurb)
+### 2.2 Selected Projects (Research)
 
-Edit the **Projects** section in the body of `_pages/about.md`. This is a short text summary, not the project cards — for the full project card page, see [5. Projects Page](#5-projects-page).
+The **Selected Projects** section on the homepage displays research projects in a text-block style (title + description + action buttons). Data comes from `_projects/*.md` files with `category: research` and `selected: true`.
 
-### 2.3 Honors & Awards
+To add a research project to the homepage, create a file in `_projects/` with:
+
+```yaml
+---
+layout: page
+title: "Project Title"
+description: >
+  A paragraph describing the project background, problem, approach, and contributions.
+category: research              # must be "research"
+selected: true                  # true = show on homepage
+year: 2025                      # start year, used for sorting (newer first)
+period: "2025 – Present"        # optional: displayed time period (e.g., "2023", "2023 – 2025", "2025 – Present")
+github: https://github.com/...  # optional
+website: https://...            # optional
+img: assets/img/project_xxx.png # optional: preview image (right side, any aspect ratio)
+papers:                         # optional: linked papers from papers.bib
+  - key: zhao2025xxx            #   citation key
+    label: "CONF 2025"          #   display label (venue + year)
+---
+```
+
+### 2.3 Side Projects
+
+The **Side Projects** section on the homepage displays interest/open-source projects as cards (below Selected Publications). Data comes from `_projects/*.md` files with `category: fun` and `selected: true`.
+
+```yaml
+---
+layout: page
+title: Project Name
+description: One-line description
+category: fun                   # must be "fun"
+selected: true                  # true = show on homepage
+year: 2024                      # used for sorting (newer first) and displayed on card
+github: https://github.com/...  # optional
+website: https://...            # optional
+redirect: https://...           # optional: override card click URL
+img: assets/img/project_xxx.png # optional: preview image
+---
+```
+
+### 2.4 Honors & Awards
 
 Edit the **Honors & Awards** section in the body of `_pages/about.md`.
 
 > **Also update:** `_data/cv.yml` under the `Awards` and `Scholarships` sections so the CV page stays consistent.
 
-### 2.4 Service
+### 2.5 Service
 
 Edit the **Service** section in the body of `_pages/about.md`.
 
 > **Also update:** `_data/cv.yml` under the `Service` section if you want it reflected on the CV page.
 
-### 2.5 Interests
+### 2.6 Interests
 
 Edit the **Interests** section in the body of `_pages/about.md`.
 
-### 2.6 Announcements
+### 2.7 Announcements
 
 To enable: set `announcements: enabled: true` in `_pages/about.md` front matter, then add files to `_news/`:
 
@@ -185,20 +225,54 @@ The CV page is fully driven by this file. Structure:
 
 ## 5. Projects Page
 
-**Directory: `_projects/`** — each `.md` file is one project card.
+**Directory: `_projects/`** — each `.md` file is one project.
+
+The projects page (`_pages/projects.md`) displays two sections:
+
+- **Research Projects** — text-block style (title + description + action buttons), same as homepage
+- **Side Projects** — card style with optional image, same as homepage
+
+All projects in `_projects/` are shown on the projects page regardless of the `selected` field. The `selected` field only controls whether the project appears on the homepage.
+
+### Research Project front matter
 
 ```yaml
 ---
 layout: page
-title: Project Title
-description: One-line description with <a href="...">links</a>
-img: assets/img/your_image.jpg   # optional preview image
-importance: 1                    # lower = shown first within category
-category: work                   # work | fun
+title: "Project Title"
+description: >
+  Multi-line description of the project.
+category: research              # "research" for text-block display
+selected: true                  # show on homepage?
+year: 2025                      # start year, used for sorting (newer first)
+period: "2025 – Present"        # optional: displayed time period
+github: https://github.com/...  # optional
+website: https://...            # optional
+img: assets/img/project_xxx.png # optional: preview image (right side, any aspect ratio)
+papers:                         # optional: linked papers from papers.bib
+  - key: zhao2025xxx            #   citation key
+    label: "CONF 2025"          #   display label (venue + year)
 ---
 ```
 
-Add preview images to `assets/img/`. To add a new project, copy an existing file and rename it (the filename is only for organization; `importance` controls order).
+### Side Project front matter
+
+```yaml
+---
+layout: page
+title: Project Name
+description: One-line description
+category: fun                   # "fun" for card display
+selected: true                  # show on homepage?
+year: 2024                      # used for sorting (newer first) and displayed on card
+github: https://github.com/...  # optional
+website: https://...            # optional
+redirect: https://...           # optional: override card click URL
+img: assets/img/project_xxx.png # optional
+---
+```
+
+Add preview images to `assets/img/`. To add a new project, create a new `.md` file in `_projects/` (filename is for organization only; `year` controls display order).
 
 ---
 
