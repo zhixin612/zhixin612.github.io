@@ -64,22 +64,22 @@ ninja.data = [{
               window.location.href = "/projects/DNN/";
             },},{id: "projects-memory-pooling-and-management-for-multi-llm-colocation",
           title: 'Memory Pooling and Management for Multi-LLM Colocation',
-          description: "Cloud LLM serving typically deploys models on exclusive GPUs, causing memory underutilization and compute waste under bursty traffic. We design a multi-LLM colocation system with global GPU memory pooling for unified management of model weights, KV cache, and activations, combined with priority-aware scheduling and dynamic offloading to mitigate contention and improve serving throughput.",
+          description: "Cloud LLM serving typically deploys models on exclusive GPUs, leading to memory underutilization and compute waste under bursty workloads. We design a **multi-LLM colocation system with global GPU memory pooling** for the unified management of weights, KV cache, and activations, integrated with priority-aware scheduling and dynamic offloading to mitigate resource contention and enhance throughput.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/colocation/";
             },},{id: "projects-pat-prefix-aware-attention-for-llm-decoding",
           title: 'PAT: Prefix-Aware Attention for LLM Decoding',
-          description: "LLM serving systems face significant efficiency challenges during the decoding phase due to heavy KV cache reads. We introduces a prefix-aware attention mechanism that eliminates redundancies KV cache reads by reorganizing computation around intra-batch shared prefix structures, achieving substantial speedup in multi-tenant LLM serving scenarios.",
+          description: "LLM serving systems face efficiency bottlenecks during the decoding phase due to heavy KV cache read overhead. We design **PAT (Prefix-Aware Attention)**, which eliminates redundant KV cache reads by reorganizing computation around intra-batch shared prefix structures, achieving substantial speedup in multi-tenant LLM serving scenarios.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/pat/";
             },},{id: "projects-prediction-based-two-level-request-scheduling-for-llm-serving",
           title: 'Prediction-based Two-level Request Scheduling for LLM Serving',
-          description: "The unpredictable output length of LLM requests often leads to severe load imbalance across instances and inefficient resource utilization within them. We develop a prediction-based scheduling framework that leverages a high-accuracy output length predictor to enable a two-level scheduling mechanism: cluster-level multi-dimensional load balancing and instance-level SLO-aware scheduling. This system significantly improves the throughput of large-scale LLM deployments while strictly maintaining service quality.",
+          description: "The uncertain LLM output lengths cause load imbalance across instances and frequent request preemption. We develop a **prediction-based scheduling framework** that leverages output length predictor to enable two-level scheduling: cluster-level multi-dimensional load balancing and instance-level SLO-aware scheduling, effectively improving LLM serving goodput.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/predict/";
-            },},{id: "projects-accelerating-rollout-of-rl-for-llm",
-          title: 'Accelerating rollout of RL for LLM',
-          description: "collaborative project, WIP...",
+            },},{id: "projects-accelerating-llm-rl-rollouts-via-load-balanced-scheduling",
+          title: 'Accelerating LLM RL Rollouts via Load-Balanced Scheduling',
+          description: "The long-tail effect in LLM RL rollouts causes imbalanced attention workloads and low resource utilization. We develop a **load-balancing scheduling framework** featuring length-affinity distribution across DP instances and KV-splitting to optimize SM utilization. Additionally, a similarity-based Long-Job-First (LJF) strategy is implemented to mitigate tail latency and enhance rollout throughput.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rollout/";
             },},{id: "teachings-data-science-fundamentals",
