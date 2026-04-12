@@ -1,11 +1,8 @@
 ---
-layout: cv
-permalink: /cv/
+layout: none
 title: CV
 nav: true
 nav_order: 5
-cv_format: rendercv # options: rendercv, jsonresume
-description: 
-toc:
-  sidebar: left
+nav_download: /assets/pdf/CV-ZZX-0412.pdf
+permalink: /cv/
 ---

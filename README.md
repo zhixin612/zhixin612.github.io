@@ -187,9 +187,19 @@ Place files in **`assets/pdf/`**. Naming convention: `[CONF'YY] SystemName.pdf` 
 
 ## 4. CV Page
 
-**File: `_data/cv.yml`**
+The CV nav link directly downloads the PDF file `assets/pdf/CV-ZZX-0412.pdf` instead of navigating to a page. This is configured via `nav_download` in `_pages/cv.md`:
 
-The CV page is fully driven by this file. Structure:
+```yaml
+nav_download: /assets/pdf/CV-ZZX-0412.pdf
+```
+
+To update the CV, replace the PDF file at `assets/pdf/CV-ZZX-0412.pdf` (or change the `nav_download` path to point to a new filename).
+
+> **Legacy:** `_data/cv.yml` is no longer used for the CV page but is kept for reference.
+
+**File: `_data/cv.yml`** (unused)
+
+Previously the CV page was driven by this file. Structure:
 
 ```yaml
 - title: Education
