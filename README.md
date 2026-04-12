@@ -255,7 +255,7 @@ description: >
 category: research              # "research" for text-block display
 selected: true                  # show on homepage?
 year: 2025                      # start year, used for sorting (newer first)
-period: "2025 – Present"        # optional: displayed time period
+period: "2025 – Present"        # optional: displayed time period (badge color: dark green #1a6e30)
 github: https://github.com/...  # optional
 website: https://...            # optional
 img: assets/img/project_xxx.png # optional: preview image (right side, any aspect ratio)
